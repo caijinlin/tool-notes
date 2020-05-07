@@ -1,0 +1,545 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.5">
+    
+    
+      
+        <title>Util - ToolNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.df84b5fe.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="ToolNotes" class="md-header-nav__button md-logo" aria-label="ToolNotes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            ToolNotes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Util
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ToolNotes" class="md-nav__button md-logo" aria-label="ToolNotes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ToolNotes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Vim
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vim" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vim
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../move/" title="移动大法" class="md-nav__link">
+      移动大法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../edit/" title="增删改查" class="md-nav__link">
+      增删改查
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../split/" title="分屏大法" class="md-nav__link">
+      分屏大法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../comment/" title="注释大法" class="md-nav__link">
+      注释大法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../indent/" title="缩进大法" class="md-nav__link">
+      缩进大法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    格式全部代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    格式部分代码
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h2 id="_1">参考资料****</h2>
+<blockquote>
+<p>https://harttle.land/2015/11/07/vim-cursor.html</p>
+<p><a href="https://blog.csdn.net/htianlong/article/details/7436359">vimtutor</a></p>
+</blockquote>
+<h3 id="_2">格式全部代码</h3>
+<pre><code>在命令模式下先按 gg 定位到行首
+然后键入下面的命令：shift + v + g + = ，意思是先按大写的 VG来全选文本
+然后按 = 即可格式化全部代码。
+</code></pre>
+
+<h3 id="_3">格式部分代码</h3>
+<pre><code>使用 v 来进入 [ VISUAL ] 模式
+然后方向键选择要格式化的代码区域
+之后按下 = 即可格式化
+</code></pre>
+
+<p>Item2</p>
+<h2 id="_4">分屏</h2>
+<pre><code>垂直分屏：command + d
+水平分屏：command + shift + d
+切换屏幕：command + option + 方向键 或 command + [ 或 ]
+</code></pre>
+
+<h2 id="_5">标签</h2>
+<pre><code>新建标签：command + t
+关闭标签：command + w
+切换标签：command + → | ←
+切换全屏：command + enter
+</code></pre>
+
+<h2 id="_6">移动</h2>
+<pre><code>到行首：ctrl + a
+到行尾：ctrl + e
+向前移动字符：ctrl + f 或 →
+向后移动字符：ctrl + b 或 ←
+向前移动单词：option + → | ←
+向后移动单词：option + → | ←
+</code></pre>
+
+<h2 id="_7">编辑</h2>
+<pre><code>删除当前光标的字符：ctrl + d
+删除光标之前的字符：ctrl + h
+删除光标之前的单词：ctrl + w
+删除到文本末尾：ctrl + k
+清除当前行：ctrl + u
+交换光标处文本：ctrl + t
+撤销：ctrl + -
+</code></pre>
+
+<h2 id="_8">历史</h2>
+<pre><code>上一条命令：ctrl + p
+查找历史命令：ctrl + r
+命令历史：command + shift + h
+
+</code></pre>
+
+<h2 id="_9">其它</h2>
+<pre><code>隐藏item2：ctrl-h
+自动完成：command+; (输入打头几个字母，然后按快捷键自动列出之前输入过的类似命令)
+</code></pre>
+
+<p>Git</p>
+<h1 id="aliases">Aliases</h1>
+<pre><code>alias gcl='git clone'
+alias ga='git add'
+alias grm='git rm'
+alias gap='git add -p'
+alias gall='git add -A'
+alias gf='git fetch --all --prune'
+alias gft='git fetch --all --prune --tags'
+alias gfv='git fetch --all --prune --verbose'
+alias gftv='git fetch --all --prune --tags --verbose'
+alias gus='git reset HEAD'
+alias grs='git reset --soft HEAD^'
+alias gpristine='git reset --hard &amp;&amp; git clean -dfx'
+alias gclean='git clean -fd'
+alias gm=&quot;git merge&quot;
+alias gmv='git mv'
+alias g='git'
+alias get='git'
+alias gst='git status'
+alias gs='git status'
+alias gss='git status -s'
+alias gsu='git submodule update --init --recursive'
+alias gl='git pull'
+alias glum='git pull upstream master'
+alias gpr='git pull --rebase'
+alias gpp='git pull &amp;&amp; git push'
+alias gup='git fetch &amp;&amp; git rebase'
+alias gp='git push'
+alias gpo='git push origin'
+alias gpu='git push --set-upstream'
+alias gpuo='git push --set-upstream origin'
+alias gpom='git push origin master'
+alias gr='git remote'
+alias grv='git remote -v'
+alias gra='git remote add'
+alias gd='git diff'
+alias gdv='git diff -w &quot;$@&quot; | vim -R -'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcm='git commit -v -m'
+alias gcam=&quot;git commit -v -am&quot;
+alias gci='git commit --interactive'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbt='git branch --track'
+alias gbm='git branch -m'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcb='git checkout -b'
+alias gcob='git checkout -b'
+alias gct='git checkout --track'
+alias gexport='git archive --format zip --output'
+alias gdel='git branch -D'
+alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias gg=&quot;git log --graph --pretty=format:'%C(bold)%h%Creset%C(magenta)%d%Creset %s %C(yellow)&lt;%an&gt; %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative&quot;
+alias ggs=&quot;gg --stat&quot;
+alias gsl=&quot;git shortlog -sn&quot;
+alias gwc=&quot;git whatchanged&quot;
+alias gt=&quot;git tag&quot;
+alias gta=&quot;git tag -a&quot;
+alias gtd=&quot;git tag -d&quot;
+alias gtl=&quot;git tag -l&quot;
+# From http://blogs.atlassian.com/2014/10/advanced-git-aliases/
+# Show commits since last pull
+alias gnew=&quot;git log HEAD@{1}..HEAD@{0}&quot;
+# Add uncommitted and unstaged changes to the last commit
+alias gcaa=&quot;git commit -a --amend -C HEAD&quot;
+alias ggui=&quot;git gui&quot;
+alias gcsam=&quot;git commit -S -am&quot;
+alias gstd=&quot;git stash drop&quot;
+alias gstl=&quot;git stash list&quot;
+alias gh='cd &quot;$(git rev-parse --show-toplevel)&quot;'
+</code></pre>
+
+<h1 id="notices">Notices</h1>
+<p>拉取当前分支</p>
+<pre><code>git branch --set-upstream-to=origin/branch branch
+gpr
+</code></pre>
+
+<p>Linux</p>
+<h3 id="id">根据进程id查端口号</h3>
+<p>netstat -anop|grep 12146</p>
+<h3 id="ipip">统计访问日志IP和每个IP访问的次数</h3>
+<p>cat /home/wwwlogs/access-test.log | awk '{print  $1}' |sort| uniq -c |sort -rn |head -10</p>
+<h3 id="cpu10">CPU占用最多的前10个进程</h3>
+<p>ps auxw|head -1;ps auxw|sort -rn -k3|head -10</p>
+<h3 id="10">内存占用最多的前10个进程</h3>
+<p>ps auxw|head -1;ps auxw|sort -rn -k4|head -10</p>
+<h3 id="10_1">虚拟内存使用最多的前10个进程</h3>
+<p>ps auxw|head -1;ps auxw|sort -rn -k5|head -10</p>
+<h3 id="php-fpm">查看每个php-fpm占用内存</h3>
+<p>ps -ylC php-fpm --sort:rss | awk 'NR&gt;1 {$8=int($8/1024)"M";}{ print;}'</p>
+<h3 id="php-fpm_1">查看php-fpm平均使用内存</h3>
+<p>ps --no-headers -o "rss,cmd" -C php-fpm | awk '{ sum+=$1 } END { printf ("%d%s\n", sum/NR/1024,"M") }'</p>
+<h3 id="10_2">文件大小排序并取前10个</h3>
+<pre><code>du -s ./access.log* | sort -rn | head
+</code></pre>
+
+<h3 id="aaabbb">将当前目录下所有aaa都替换为bbb</h3>
+<pre><code>grep -rl 'aaa' ./  | xargs sed -i &quot;&quot; &quot;s/aaa/bbb/g&quot;
+</code></pre>
+
+<h3 id="_10">查看进程线程个数</h3>
+<pre><code>ps hH p pid | wc -l
+</code></pre>
+
+<h3 id="cpuphp-fpm">强制结束内存(CPU)消耗高的php-fpm进程</h3>
+<h1 id="binsh">!/bin/sh</h1>
+<p>fpms=ps aux | grep php-fpm | grep -v grep | awk '{if($4&gt;=5)print $2}'  # 内存是$4，cpu是$3，$2是进程号，内存&gt;5%</p>
+<p>for fpm in $fpms;
+   do kill -9 $fpm echo date +'%F %T' $fpm &gt;&gt;/var/log/php5/kill.log
+done</p>
+<h3 id="_11">磁盘监控</h3>
+<h1 id="binsh_1">!/bin/sh</h1>
+<p>diskinfo="/tmp/diskinfo.txt"</p>
+<p>for d in <code>df -P | grep /dev | awk '{print $5}'| sed 's/%//g'</code>
+do
+    if [ $d -gt 90 ];then
+        df -h&gt;&gt;$diskinfo;
+        #sendmail
+        mutt -s "disk warining!" "1399534656@qq.com" &lt;${diskinfo} -a ${diskinfo}
+        exit 0;
+    fi
+done</p>
+<h1 id="awk-httpssegmentfaultcoma1190000009745139">awk https://segmentfault.com/a/1190000009745139</h1>
+<p>view rawdevops.sh hosted with ❤ by GitHub</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.83fe6e3c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
