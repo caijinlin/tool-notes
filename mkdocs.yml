@@ -13,3 +13,7 @@ nav:
         - 移动大法: item2/move.md
         - 编辑大法: item2/edit.md
         - 分屏大法: item2/split.md
+    - Mac:
+        - 必备软件: mac/software.md
+        - 命令行: mac/command.md
+
