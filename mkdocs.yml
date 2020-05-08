@@ -9,3 +9,7 @@ nav:
         - 分屏大法: vim/split.md
         - 注释大法: vim/comment.md
         - 缩进大法: vim/indent.md
+    - Item2:
+        - 移动大法: item2/move.md
+        - 编辑大法: item2/edit.md
+        - 分屏大法: item2/split.md
