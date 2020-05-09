@@ -21,4 +21,9 @@ nav:
     - Mac:
         - 必备软件: mac/software.md
         - 命令行: mac/command.md
+    - Linux:
+        - 系统状态: linux/system.md
+        - 进程线程: linux/progress.md
+        - 系统监控: linux/monitor.md
+        - 文本处理: linux/text.md
 
