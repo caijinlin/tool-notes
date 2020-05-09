@@ -48,7 +48,7 @@
 
 ### WireShark
 
-> 协议抓包
+> 网络协议分析
 
 ### Postman
 
@@ -58,7 +58,7 @@
 
 > 一款api文档浏览器
 
-## Pycharm/Goland/Phpstorm/CLion
+### Pycharm/Goland/Phpstorm/CLion
 
 > jetbrains 系列IDE
 
