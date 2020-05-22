@@ -35,4 +35,11 @@
 * `Ctrl+b ;/o` 光标切换到上一个/下一个窗格
 * `tmux kill-pane` 关闭窗格
 
+### 设置tmux允许滚动
+
+```
+echo "setw -g mouse on" >> ~/.tmux.conf
+tmux source-file ~/.tmux.conf
+```
+
 
