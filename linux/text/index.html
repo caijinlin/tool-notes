@@ -568,8 +568,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sed" class="md-nav__link">
     sed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    ls
   </a>
   
 </li>
@@ -589,8 +610,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cut" class="md-nav__link">
+    cut
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    wc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zip" class="md-nav__link">
     zip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    tar
   </a>
   
 </li>
@@ -654,8 +696,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sed" class="md-nav__link">
     sed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    ls
   </a>
   
 </li>
@@ -675,8 +738,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cut" class="md-nav__link">
+    cut
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    wc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zip" class="md-nav__link">
     zip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    tar
   </a>
   
 </li>
@@ -708,7 +792,8 @@
 <h3 id="awk">awk</h3>
 <ul>
 <li><code>cat &lt;file&gt; | awk -F ',' 'BEGIN{print "字段1","字段2"} { print }'</code> 输出表头</li>
-<li><code>cat &lt;file&gt; | awk 'BEGIN{ORS=","}{ print }</code> 逗号连接数组</li>
+<li><code>cat &lt;file&gt; | awk -F ',' '{OFS=","; print $2,$1,0}</code> 每一行逗号拼接字符串</li>
+<li><code>cat &lt;file&gt; | awk 'BEGIN{ORS=","}{ print }</code> 逗号连接多行</li>
 <li><code>cat &lt;file&gt; | awk 'BEGIN{RS=","}{ print }</code>  逗号分隔字符串</li>
 <li><code>cat &lt;file&gt; | awk -F ',' '{ print NR, NF }'</code> 查看行数、列数</li>
 <li><code>cat &lt;file&gt; | awk -F ',' '{count[$1]++} END {for(k in count) print k,count[k]}'</code> 统计</li>
@@ -720,6 +805,19 @@
 <li><code>grep -c "match_pattern" &lt;file&gt;</code> 输出包含字符行数</li>
 <li><code>grep "match_pattern" . -r -n</code> 递归搜索文件</li>
 <li><code>grep -E "pattern1|pattern2" &lt;file&gt;</code> 匹配多个样式</li>
+<li><code>grep -F -v -f a.file b.file</code> 查询b-a差集</li>
+</ul>
+<h3 id="find">find</h3>
+<ul>
+<li><code>find . -type f -atime -7</code> 最近7天内被访问过的文件</li>
+<li><code>find . -type f -atime 7</code>  7天前被访问过的文件</li>
+<li><code>find . -type f -atime +7</code> 超过7天内被访问的文件</li>
+<li><code>find . -type f -name "*.txt" -delete</code> 删除当前目录*.txt</li>
+<li><code>find . -name "*.txt" -o -name "*.pdf"</code> 获取多种后缀名文件</li>
+</ul>
+<h3 id="sort">sort</h3>
+<ul>
+<li><code>cat &lt;file&gt; | sort -t ',' -k 2 -rn</code> 文件逗号分隔，按照第2列纯数字逆序排序输出</li>
 </ul>
 <h3 id="sed">sed</h3>
 <ul>
@@ -730,20 +828,46 @@
 <li><code>sed 's/book/books/g' &lt;file&gt;</code> 替换文件的所有字符串</li>
 <li><code>sed 's/book/books/2g' &lt;file&gt;</code> 从第N处匹配开始替换时替换文件的所有字符串</li>
 <li><code>sed 's/,/\n/g' &lt;file&gt;</code> 替换换行符</li>
+<li><code>sed -i '1i\&lt;content&gt;' &lt;file&gt;</code> 第1行插入  </li>
+<li><code>sed -i '/^INFO/'d &lt;file&gt;</code> 删除以INFO开头的文件</li>
+</ul>
+<h3 id="ls">ls</h3>
+<ul>
+<li><code>ls station_[0-9a-z]*_orders.txt</code> 查看文件 </li>
 </ul>
 <h3 id="uniq">uniq</h3>
 <ul>
 <li><code>cat &lt;file1&gt; &lt;file2&gt; | sort | uniq -u</code> 求文本差集</li>
+<li><code>sort &lt;file&gt; | uniq -c</code> 计算行重复的次数</li>
+<li><code>sort &lt;file&gt; | uniq -d</code> 仅显示重复行</li>
+<li><code>sort &lt;file&gt; | uniq -u</code> 仅显示不重复行  </li>
 </ul>
 <h3 id="tr">tr</h3>
 <ul>
 <li><code>cat &lt;file&gt; | tr a-z A-Z</code> 小写转大写</li>
 <li><code>cat &lt;file&gt; | tr "," "\t"</code> 逗号分隔符转tab </li>
 </ul>
+<h3 id="cut">cut</h3>
+<ul>
+<li><code>echo $PATH | cut -d ':' -f 3,5</code> 提取第3和第5列</li>
+</ul>
+<h3 id="wc">wc</h3>
+<ul>
+<li><code>wc -l</code> 计算行数</li>
+<li><code>wc -w</code> 计算单词数</li>
+<li><code>wc -m</code> 计算字节数</li>
+</ul>
 <h3 id="zip">zip</h3>
 <ul>
 <li><code>zip -r &lt;file&gt;.zip &lt;file&gt;</code>  </li>
 <li><code>unzip &lt;file&gt;.zip</code></li>
+</ul>
+<h3 id="tar">tar</h3>
+<ul>
+<li><code>tar -czvf file.gz &lt;file&gt;</code> 压缩</li>
+<li><code>tar --exclude=&lt;dir&gt;/1.txt -czvf file.gz &lt;dir&gt;</code> 排除文件排除1.txt压缩</li>
+<li><code>tar -tzvf file.gz</code> 列出压缩文件列表</li>
+<li><code>tar -xzvf file.gz</code> 解压</li>
 </ul>
 <h3 id="rsync">rsync</h3>
 <p>需要复制本机ssh公钥到远程机器</p>
