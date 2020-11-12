@@ -16,6 +16,7 @@
 
 ### 网络
 
+* `ss` 
 * `ifstat` 网络io统计
 * `netstat -nat | grep <port>` 指定端口的网络连接数
 * `netstat -nat|awk '{print $6}'|sort|uniq -c|sort -rn` 网络连接各状态统计

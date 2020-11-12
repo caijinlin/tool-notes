@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ### 本地预览
 
 ```
-mkdocs server
+mkdocs serve
 ```
 
 ### 发布

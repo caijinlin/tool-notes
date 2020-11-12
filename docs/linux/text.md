@@ -3,7 +3,8 @@
 ### awk
 
 * `cat <file> | awk -F ',' 'BEGIN{print "字段1","字段2"} { print }'` 输出表头
-* `cat <file> | awk 'BEGIN{ORS=","}{ print }` 逗号连接数组
+* `cat <file> | awk -F ',' '{OFS=","; print $2,$1,0}` 每一行逗号拼接字符串
+* `cat <file> | awk 'BEGIN{ORS=","}{ print }` 逗号连接多行
 * `cat <file> | awk 'BEGIN{RS=","}{ print }`  逗号分隔字符串
 * `cat <file> | awk -F ',' '{ print NR, NF }'` 查看行数、列数
 * `cat <file> | awk -F ',' '{count[$1]++} END {for(k in count) print k,count[k]}'` 统计
@@ -15,6 +16,20 @@
 * `grep -c "match_pattern" <file>` 输出包含字符行数
 * `grep "match_pattern" . -r -n ` 递归搜索文件
 * `grep -E "pattern1|pattern2" <file>` 匹配多个样式
+* `grep -F -v -f a.file b.file` 查询b-a差集
+
+### find
+
+* `find . -type f -atime -7` 最近7天内被访问过的文件
+* `find . -type f -atime 7`  7天前被访问过的文件
+* `find . -type f -atime +7` 超过7天内被访问的文件
+* `find . -type f -name "*.txt" -delete` 删除当前目录*.txt
+* `find . -name "*.txt" -o -name "*.pdf"` 获取多种后缀名文件
+
+
+### sort
+
+* `cat <file> | sort -t ',' -k 2 -rn` 文件逗号分隔，按照第2列纯数字逆序排序输出
 
 ### sed
 
@@ -25,21 +40,48 @@
 * `sed 's/book/books/g' <file>` 替换文件的所有字符串
 * `sed 's/book/books/2g' <file>` 从第N处匹配开始替换时替换文件的所有字符串
 * `sed 's/,/\n/g' <file>` 替换换行符
+* `sed -i '1i\<content>' <file>` 第1行插入  
+* `sed -i '/^INFO/'d <file>` 删除以INFO开头的文件
 
+### ls
+
+* `ls station_[0-9a-z]*_orders.txt` 查看文件 
 
 ### uniq
 
 * `cat <file1> <file2> | sort | uniq -u` 求文本差集
+* `sort <file> | uniq -c` 计算行重复的次数
+* `sort <file> | uniq -d` 仅显示重复行
+* `sort <file> | uniq -u` 仅显示不重复行  
 
 ### tr
 
 * `cat <file> | tr a-z A-Z` 小写转大写
 * `cat <file> | tr "," "\t"` 逗号分隔符转tab 
 
+
+### cut
+
+* `echo $PATH | cut -d ':' -f 3,5` 提取第3和第5列
+
+### wc
+
+* `wc -l` 计算行数
+* `wc -w` 计算单词数
+* `wc -m` 计算字节数
+
 ### zip
 
 * `zip -r <file>.zip <file>`  
 * `unzip <file>.zip`
+
+
+### tar
+
+* `tar -czvf file.gz <file>` 压缩
+* `tar --exclude=<dir>/1.txt -czvf file.gz <dir>` 排除文件排除1.txt压缩
+* `tar -tzvf file.gz` 列出压缩文件列表
+* `tar -xzvf file.gz` 解压
 
 ### rsync
 
